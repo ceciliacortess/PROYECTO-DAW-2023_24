@@ -1,37 +1,27 @@
-# PROYECTO-DAW-2023_24
+# PROJECT-DAW-2023_24
 
-### HOW TO INSERT THE HEADER AND FOOTER
+### HOW TO RUN OUR WEBSITE ON YOUR PC
+1. Install [Node.js](https://nodejs.org/en) in your computer.
+2. Download GIT [GIT](https://git-scm.com/downloads) and get this repository using `git clone "url of the project"`.
+3. In **Visual Studio Code** (or the code editor you prefer), inside the project's directory, you have to run these commands to install all the dependecies you need: <br>
+    `npm install -g npm"` <br>
+    `npm install bootstrap"` <br>
+    `npm install auth0"`
+   
+    ![npm](https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/e7a4000e-bc6a-44cc-940d-d524584d43c2)
 
-To insert the header and footer to each page u need to insert this in the js file:
-~~~
-document.addEventListener("DOMContentLoaded", function () {
-    const headerContainer = document.getElementById("header-container");
-    const footerContainer = document.getElementById("footer-container");
-    fetch("../../header_footer/html/header.html")
-        .then(response => response.text())
-        .then(data => {
-            headerContainer.innerHTML = data;
-        })
-        .catch(error => {
-            console.error("Error al cargar el header:", error);
-        });
-    fetch("../../header_footer/html/footer.html")
-        .then(response => response.text())
-        .then(data => {
-            footerContainer.innerHTML = data;
-        })
-        .catch(error => {
-            console.error("Error al cargar el footer:", error);
-        });
-});
-~~~
+4. Lastly, you can download in Visual Studio Code the **Live Server** extension, to see the project properly.
+   <table>
+    <tr>
+        <th>Extension</th>
+        <th>WebCode's website</th>
+    </tr>
+    <tr>
+        <td> <img src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/b15074ea-b162-4047-8c05-e0575a5f6779"></td>        
+        <td> <img width ="500px" src="https://github.com/nestorgarciacheste/PROYECTO-DAW-2023_24/assets/131865422/b19ee5ae-7480-462f-ab15-e34560312a7c"</td>        
+    </tr>
+</table>
 
-And u need this 2 lines in your html:
-
-~~~
-    <header id="header-container"></header>
-    <footer id="footer-container"></footer>
-~~~
 
 # WebCode
 Our **WebCode website** is a platform where the client can acquire web services and products. Therefore, users can obtain not only knowledge about websites and their maintenance but also acquire their own webpage.
@@ -861,7 +851,35 @@ To implement this section, we have created a main branch named `features_gallery
 - The team collectively worked on the development of TopBar and Footer, providing navigation links to different pages, a search bar, and user profile information. The Footer also includes links to social media platforms, such as Facebook, Instagram, and LinkedIn.
 
 
+### TO OUR DEVELOPERS: HOW TO INSERT THE HEADER AND FOOTER
 
+To insert the header and footer to each page u need to insert this in the js file:
+~~~
+document.addEventListener("DOMContentLoaded", function () {
+    const headerContainer = document.getElementById("header-container");
+    const footerContainer = document.getElementById("footer-container");
+    fetch("../../header_footer/html/header.html")
+        .then(response => response.text())
+        .then(data => {
+            headerContainer.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error al cargar el header:", error);
+        });
+    fetch("../../header_footer/html/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            footerContainer.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error al cargar el footer:", error);
+        });
+});
+~~~
 
-      
-  
+And u need this 2 lines in your html:
+
+~~~
+    <header id="header-container"></header>
+    <footer id="footer-container"></footer>
+~~~
